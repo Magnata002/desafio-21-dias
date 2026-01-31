@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Descubra o protocolo de desinflamação de 21 dias com Heloísa Santos. Um método simples, guiado por aplicativo, para recuperar sua energia e autoestima naturalmente.">
+    <title>Desafio 21 Dias - Corpo Desinflama com Heloísa Santos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Progress Bar (Visible on Quiz Steps 2-10) -->
+    <div id="progress-container" class="container"
+        style="padding-bottom: 0; padding-top: 20px; max-height: 40px; display: none;">
+        <div class="progress-container">
+            <div id="quiz-progress" class="progress-bar"></div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- ETAPA 1 - LANDING PAGE -->
+        <div id="step-1" class="step active">
+            <div class="text-center">
+                <span class="badge">📲 Tudo no aplicativo - Acompanhe pelo celular</span>
+                <h3 class="mb-4">Desafio 21 Dias<br><span class="text-primary">Corpo Desinflama</span><br><small>com
+                        Heloísa Santos</small></h3>
+
+                <img src="https://placehold.co/600x400/e6ffe6/27ae60?text=Hero:+Mulher+com+Celular"
+                    alt="Mulher segurando celular" class="hero-image">
+
+                <h1 class="mb-4" style="font-size: 1.8rem; color: var(--text-dark);">
+                    Descubra o protocolo simples que me fez <span class="text-pink">perder 4,5kg de inchaço</span>,
+                    acordar com energia e finalmente ter uma barriga lisa.
+                </h1>
+
+                <p class="mb-4" style="color: var(--text-light); font-size: 1.1rem;">
+                    Sem dieta restritiva, sem passar fome e sem virar fitness.<br>
+                    <strong>Tudo no app do seu celular, direto na palma da sua mão.</strong>
+                </p>
+
+                <div class="card bg-white mb-4">
+                    <p>📱 <strong>O aplicativo completo que já ajudou mais de 400 mulheres:</strong></p>
+                    <ul style="list-style: none; text-align: left; margin-top: 10px; padding-left: 20px;">
+                        <li>✅ Tela inicial do app</li>
+                        <li>✅ Cardápio do dia</li>
+                        <li>✅ Checklist de tarefas</li>
+                        <li>✅ Contador de dias</li>
+                    </ul>
+                </div>
+
+                <button class="btn btn-primary btn-pulse" onclick="nextStep()">
+                    📱 DESCOBRIR MEU NÍVEL DE INFLAMAÇÃO
+                </button>
+            </div>
+        </div>
+
+        <!-- ETAPA 2 - SINTOMA PRINCIPAL -->
+        <div id="step-2" class="step">
+            <div class="text-center mb-4">
+                <p class="text-primary font-weight-bold">Pergunta 1/9</p>
+                <h2>Como você se sente quando olha pro seu corpo no espelho?</h2>
+            </div>
+            <div class="selection-grid">
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">😰</span>
+                    <span class="text">Frustrada: Estou sempre inchada, mesmo comendo pouco</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">😳</span>
+                    <span class="text">Envergonhada: Meu corpo não reflete meus esforços</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">😓</span>
+                    <span class="text">Cansada: Acordo sem energia e pesada</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">😔</span>
+                    <span class="text">Desanimada: Já tentei de tudo e nada funciona</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ETAPA 3 - INCHAÇO MATINAL -->
+        <div id="step-3" class="step">
+            <div class="text-center mb-4">
+                <p class="text-primary font-weight-bold">Pergunta 2/9</p>
+                <h2>Como você acorda na maioria dos dias?</h2>
+            </div>
+            <div class="selection-grid">
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">😴</span>
+                    <span class="text">Com o rosto inchado - leva horas pra "desinchar"</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">🤰</span>
+                    <span class="text">Com a barriga estufada - parece que tá grávida</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">🥱</span>
+                    <span class="text">Cansada e sem energia - mesmo tendo dormido bem</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">🫠</span>
+                    <span class="text">Com o corpo todo pesado - parece que ganhou 3kg da noite pro dia</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ETAPA 4 - SITUAÇÃO DA BARRIGA -->
+        <div id="step-4" class="step">
+            <div class="text-center mb-4">
+                <p class="text-primary font-weight-bold">Pergunta 3/9</p>
+                <h2>O que acontece com sua barriga depois das refeições?</h2>
+                <img src="https://placehold.co/400x300/e6ffe6/27ae60?text=Foco+Barriga" class="hero-image mt-4"
+                    style="height: 150px; object-fit: cover;">
+            </div>
+            <div class="selection-grid">
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">😣</span>
+                    <span class="text">Incha MUITO - principalmente depois do almoço</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">🎈</span>
+                    <span class="text">Fica estufada - não consigo nem fechar o botão da calça</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">😖</span>
+                    <span class="text">Dói e fica desconfortável - tenho que soltar a roupa</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">🫄</span>
+                    <span class="text">Parece que estou grávida - mesmo comendo pouco</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ETAPA 5 - VARIAÇÃO DE PESO -->
+        <div id="step-5" class="step">
+            <div class="text-center mb-4">
+                <p class="text-primary font-weight-bold">Pergunta 4/9</p>
+                <h2>Seu peso varia muito de um dia pro outro?</h2>
+            </div>
+            <div class="selection-grid">
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">📊</span>
+                    <span class="text">Sim, varia 1-2kg facilmente sem motivo aparente</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">😰</span>
+                    <span class="text">Varia mais de 2kg - não entendo o que acontece</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">👗</span>
+                    <span class="text">Minhas roupas servem num dia e não servem no outro</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">⚖️</span>
+                    <span class="text">Acordo mais pesada mesmo comendo bem no dia anterior</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ETAPA 6 - NÍVEL DE ENERGIA -->
+        <div id="step-6" class="step">
+            <div class="text-center mb-4">
+                <p class="text-primary font-weight-bold">Pergunta 5/9</p>
+
+                <div class="card mb-4" style="font-style: italic; background: #fff;">
+                    <p>"Em 10 dias minha energia voltou. Eu tinha esquecido como era acordar disposta. O app me guiou em
+                        cada passo!"</p>
+                    <p class="text-right mt-2"><strong>- Carla, 41 anos</strong></p>
+                </div>
+
+                <h2>Como está sua disposição ao longo do dia, assim como a Carla sentia antes?</h2>
+            </div>
+            <div class="selection-grid">
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">☕</span>
+                    <span class="text">Dependo de café pra funcionar o dia todo</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">😴</span>
+                    <span class="text">Tenho picos de cansaço principalmente depois do almoço</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">🛌</span>
+                    <span class="text">Vivo exausta - só quero deitar</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">🥱</span>
+                    <span class="text">Acordo cansada e continuo assim o dia todo</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ETAPA 7 - TENTATIVAS ANTERIORES -->
+        <div id="step-7" class="step">
+            <div class="text-center mb-4">
+                <p class="text-primary font-weight-bold">Pergunta 6/9</p>
+                <h2>O que você JÁ tentou fazer pra resolver isso?</h2>
+            </div>
+            <div class="selection-grid">
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">🥖</span>
+                    <span class="text">Cortei glúten - não mudou nada</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">🥛</span>
+                    <span class="text">Cortei lactose - continuei inchada</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">🥗</span>
+                    <span class="text">Fiz dietas restritivas - perdi peso mas continuei estufada</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">🍵</span>
+                    <span class="text">Tomei chás detox - funcionou 2 dias e voltou tudo</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ETAPA 8 - DOR INTENSIFICADA -->
+        <div id="step-8" class="step">
+            <div class="text-center mb-4">
+                <p class="text-primary font-weight-bold">Pergunta 7/9</p>
+                <img src="https://placehold.co/400x200/e6ffe6/27ae60?text=Comparacao+Amiga" class="hero-image mt-2"
+                    style="height: 150px; object-fit: cover;">
+                <h2>Você já se perguntou por que sua amiga come de tudo e continua magra, enquanto você come salada e
+                    continua <span class="text-pink">inchada</span>?</h2>
+            </div>
+            <div class="selection-grid">
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">😤</span>
+                    <span class="text">Sim, parece que só comigo não funciona</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">😭</span>
+                    <span class="text">Sim, acho que meu corpo é quebrado</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">🤔</span>
+                    <span class="text">Sim, mas nunca entendi o porquê</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">😔</span>
+                    <span class="text">Sim, já aceitei que vou viver assim</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ETAPA 9 - OBJETIVO -->
+        <div id="step-9" class="step">
+            <div class="text-center mb-4">
+                <p class="text-primary font-weight-bold">Pergunta 8/9</p>
+                <h2>Seu maior desejo pros próximos 30 dias é:</h2>
+            </div>
+            <div class="selection-grid">
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">👗</span>
+                    <span class="text">Voltar a caber nas minhas roupas sem passar fome</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">😊</span>
+                    <span class="text">Acordar desinchada e com energia</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">🪞</span>
+                    <span class="text">Olhar no espelho e gostar do que vejo</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">💪</span>
+                    <span class="text">Ter um corpo leve e que responde aos meus esforços</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ETAPA 10 - COMPROMETIMENTO -->
+        <div id="step-10" class="step">
+            <div class="text-center mb-4">
+                <p class="text-primary font-weight-bold">Pergunta 9/9</p>
+                <h2>Se eu te mostrar um protocolo simples que REALMENTE funciona (direto no seu celular), você está
+                    disposta a seguir por 21 dias?</h2>
+            </div>
+            <div class="selection-grid">
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">😊</span>
+                    <span class="text">50% - quero algo simples e rápido</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">💪</span>
+                    <span class="text">75% - quero tentar, mas minha rotina é corrida</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">🤩</span>
+                    <span class="text">90% - estou pronta pra mudar</span>
+                </div>
+                <div class="selection-card" onclick="selectOption(this)">
+                    <span class="emoji">😍</span>
+                    <span class="text">100% - vou fazer TUDO que for necessário</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ETAPA 11 - APRESENTAÇÃO -->
+        <div id="step-11" class="step">
+            <div class="text-center">
+                <img src="https://placehold.co/150x150/e6ffe6/27ae60?text=Heloisa"
+                    style="border-radius: 50%; width: 120px; height: 120px; margin-bottom: 20px; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+
+                <h2 class="mb-4">✨ Oi, eu sou a Heloísa Santos!</h2>
+
+                <p class="mb-4">E eu sei EXATAMENTE como você se sente...</p>
+
+                <div class="card" style="text-align: left;">
+                    <p class="mb-4">Porque eu passei 3 anos da minha vida acordando inchada, com a barriga estufada
+                        depois de CADA refeição, e aquele cansaço que parecia que nunca ia embora.</p>
+                    <p class="mb-4">Gastei mais de R$5.000 em consultas, exames e remédios que só MASCARAVAM os
+                        sintomas.</p>
+                    <p class="mb-4"><strong>Até que eu descobri que o problema não era comigo. Era a INFLAMAÇÃO
+                            silenciosa.</strong></p>
+                    <p>Juntei tudo que estudei e criei um protocolo de 21 dias.</p>
+                </div>
+
+                <div class="card bg-white mt-4">
+                    <h3 class="text-primary mb-4">E o resultado?</h3>
+                    <ul class="text-left" style="list-style: none;">
+                        <li class="mb-2">✅ Perdi 4,5kg de inchaço puro</li>
+                        <li class="mb-2">✅ Minha barriga finalmente ficou LISA</li>
+                        <li class="mb-2">✅ Voltei a acordar com energia</li>
+                        <li class="mb-2">✅ Recuperei minha confiança</li>
+                    </ul>
+                </div>
+
+                <p class="mt-4 mb-4">Mas percebi que as mulheres se perdiam com PDFs. Por isso criei o
+                    <strong>APLICATIVO COMPLETO</strong>:</p>
+
+                <img src="https://placehold.co/600x400/fff0f6/fd79a8?text=Mockup+App+Dashboard" class="hero-image">
+
+                <button class="btn btn-primary btn-pulse mt-4" onclick="nextStep()">
+                    VER OS RESULTADOS REAIS 👉
+                </button>
+            </div>
+        </div>
+
+        <!-- ETAPA 12 - PROVA SOCIAL (HELOÍSA) -->
+        <div id="step-12" class="step">
+            <div class="text-center">
+                <h2>Essa era eu há 2 anos...</h2>
+                <p class="mb-4">Sempre inchada, cansada, frustrada. Achei que era genética.</p>
+
+                <div class="card mb-4">
+                    <div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
+                        <div style="flex: 1;">
+                            <img src="https://placehold.co/200x300/e74c3c/fff?text=ANTES+X"
+                                style="width: 100%; border-radius: 8px;">
+                            <p class="mt-2" style="font-size: 0.8rem; font-weight: bold;">ANTES ❌</p>
+                            <p style="font-size: 0.7rem;">68kg / Sempre cansadag</p>
+                        </div>
+                        <div style="flex: 1;">
+                            <img src="https://placehold.co/200x300/2ecc71/fff?text=DEPOIS+V"
+                                style="width: 100%; border-radius: 8px;">
+                            <p class="mt-2" style="font-size: 0.8rem; font-weight: bold;">DEPOIS ✅</p>
+                            <p style="font-size: 0.7rem;">63,5kg / Energia total</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-primary">Demonstração do App:</h3>
+                <ul class="text-left card" style="list-style: none;">
+                    <li class="mb-2">✅ <strong>DIA 1:</strong> App me mostrou exatamente o que comer</li>
+                    <li class="mb-2">✅ <strong>DIA 5:</strong> Notificação me lembrou de beber água</li>
+                    <li class="mb-2">✅ <strong>DIA 10:</strong> Checklist me manteve no caminho</li>
+                    <li class="mb-2">✅ <strong>DIA 21:</strong> Completei com 100% de clareza</li>
+                </ul>
+
+                <button class="btn btn-primary btn-pulse mt-4" onclick="nextStep()">
+                    QUERO ESSE RESULTADO TAMBÉM
+                </button>
+            </div>
+        </div>
+
+        <!-- ETAPA 13 - CASOS DE SUCESSO (ALUNAS) -->
+        <div id="step-13" class="step">
+            <div class="text-center">
+                <h2>E não foi só comigo...</h2>
+                <p class="mb-4">Olha só o resultado de algumas mulheres que seguiram o protocolo usando o aplicativo:
+                </p>
+
+                <!-- Juliana -->
+                <div class="card mb-4">
+                    <h3>Juliana, 34 anos</h3>
+                    <p class="mb-2">Perdeu 3,8kg de inchaço em 15 dias seguindo o app.</p>
+                    <img src="https://placehold.co/500x300/e6ffe6/27ae60?text=Juliana+Antes+e+Depois"
+                        class="hero-image mb-2">
+                    <p style="font-style: italic;">"O app salvou minha vida! Eu me perdia antes. Agora é só abrir o
+                        celular e seguir."</p>
+                </div>
+
+                <!-- Carla -->
+                <div class="card mb-4">
+                    <h3>Carla, 41 anos</h3>
+                    <p class="mb-2">Completou os 21 dias usando APENAS o app.</p>
+                    <p style="font-style: italic;">"Achei que não ia conseguir. Mas o app tem TUDO. Só seguia as
+                        notificações e pronto!"</p>
+                </div>
+
+                <div class="card bg-white mb-4" style="border: 2px solid var(--primary-pink);">
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p><strong>Amanda, 36 anos:</strong> "Eu tô CHOCADA! Segui por 18 dias e já perdi 4kg, minha barriga
+                        tá LISA. Melhor investimento!"</p>
+                </div>
+
+                <button class="btn btn-primary btn-pulse mt-4" onclick="nextStep()">
+                    QUERO MEU ACESSO AO APP AGORA
+                </button>
+            </div>
+        </div>
+
+        <!-- ETAPA 14 - PÁGINA DE VENDAS -->
+        <div id="step-14" class="step sales-page">
+            <div class="countdown-banner bg-pink-600 text-white p-2 text-center"
+                style="display: block; background: #e91e63; color: white; padding: 10px; border-radius: 8px; margin-bottom: 20px;">
+                ⏰ Seu acesso ao APP vai EXPIRAR em: <span id="countdown-timer">15:00</span>
+            </div>
+
+            <div class="text-center">
+                <h1 class="mb-4">✨ Seu acesso ao APP está LIBERADO!</h1>
+                <p class="mb-4">Você está a um passo de ter nas mãos o aplicativo completo que vai transformar seu corpo
+                    nos próximos 21 dias.</p>
+
+                <div class="card mt-4 mb-4" style="background: #fff0f6; border: 2px solid #fd79a8;">
+                    <span class="badge" style="background: #e91e63; color: white; animation: pulse 2s infinite;">ÚLTIMAS
+                        VAGAS</span>
+                    <h2 class="mt-2">DESAFIO 21 DIAS CORPO DESINFLAMA</h2>
+                    <p>📱 Aplicativo Exclusivo (iOS e Android)</p>
+
+                    <div class="price-box mt-4">
+                        <div class="price-old">De: R$97,00</div>
+                        <div class="price-new">Por: R$19,90</div>
+                        <p class="text-primary font-weight-bold">🎉 ACESSO VITALÍCIO 🎉</p>
+                        <p class="text-sm text-gray-500">Parcele em até 2x sem juros</p>
+                    </div>
+
+                    <a href="#" class="btn btn-primary btn-pulse mt-4" style="font-size: 1.2rem;">
+                        📱 GARANTIR ACESSO AGORA
+                    </a>
+                </div>
+
+                <h2 class="mt-8 mb-4">📱 O que você vai ter no APP:</h2>
+
+                <div class="selection-grid text-left">
+                    <div class="selection-card" style="cursor: default;">
+                        <span class="emoji">📊</span>
+                        <div class="text">
+                            <strong>Dashboard</strong><br>
+                            Seu progresso em tempo real
+                        </div>
+                    </div>
+                    <div class="selection-card" style="cursor: default;">
+                        <span class="emoji">🍽️</span>
+                        <div class="text">
+                            <strong>Cardápio Diário</strong><br>
+                            Receitas passo a passo
+                        </div>
+                    </div>
+                    <div class="selection-card" style="cursor: default;">
+                        <span class="emoji">🛒</span>
+                        <div class="text">
+                            <strong>Lista de Compras</strong><br>
+                            Gerada AUTOMATICAMENTE
+                        </div>
+                    </div>
+                    <div class="selection-card" style="cursor: default;">
+                        <span class="emoji">🔔</span>
+                        <div class="text">
+                            <strong>Lembretes</strong><br>
+                            Água, refeições e treinos
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mt-8">
+                    <h3>🎁 BÔNUS INCLUSOS:</h3>
+                    <ul class="text-left mt-4" style="list-style: none;">
+                        <li class="mb-3">🎁 <strong>Guia de Substituições</strong> (R$27) -> GRÁTIS</li>
+                        <li class="mb-3">🎁 <strong>Checklist Automático</strong> (R$17) -> GRÁTIS</li>
+                        <li class="mb-3">🎁 <strong>SOS Inflamação</strong> (R$27) -> GRÁTIS</li>
+                        <li class="mb-3">🎁 <strong>Comunidade Privada</strong> (R$47) -> GRÁTIS</li>
+                    </ul>
+                </div>
+
+                <div class="guarantee-section mt-8 mb-8">
+                    <div
+                        style="background: #fff; padding: 20px; border-radius: 16px; border: 2px dashed var(--primary-green);">
+                        <span style="font-size: 3rem;">🛡️</span>
+                        <h3>Garantia Blindada de 7 Dias</h3>
+                        <p>Se você não sentir diferença, se achar que não vale R$19,90, eu devolvo 100% do seu dinheiro.
+                            Sem perguntas.</p>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-primary btn-pulse" style="font-size: 1.3rem; padding: 20px;">
+                    QUERO O APP POR R$19,90
+                </a>
+
+                <p class="mt-4 text-sm" style="color: #666;">
+                    🔒 Pagamento 100% seguro<br>
+                    📩 Acesso imediato no email
+                </p>
+
+                <div
+                    style="margin-top: 50px; border-top: 1px solid #eee; padding-top: 20px; font-size: 0.8rem; color: #999;">
+                    <p>APP DESAFIO 21 DIAS CORPO DESINFLAMA<br>Heloísa Santos</p>
+                    <p>© 2025 Todos os direitos reservados</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
